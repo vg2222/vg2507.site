@@ -36,31 +36,26 @@ html, body {
     color: #9786b6;
 }
 
-#page-1 {
-    opacity: 1;
-    visibility: visible;
-
-    transition-duration: 0.3s;
-}
-
-#page-1.hidden {
+.page {
     opacity: 0;
+    
     visibility: hidden;
-}
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 
-#page-2 {
-    opacity: 1;
-    visibility: visible;
-
-    transition-duration: 0.3s;
-
+    margin-top: 80px;
     text-align: center;
 }
 
-#page-2.hidden {
-    opacity: 0;
-    visibility: hidden;
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
 }
+
 
 #header-right p {
     margin: 0;
