@@ -32,23 +32,23 @@
             </svg>
         </div>
 
-        <div id="page-1" class="hidden">
+        <div id="page-1" class="page active">
             <div id="main-catalog">
             <h1 class="catalog-title">Категории программ</h1>
-            <div class="products">
+            <div id="c2" class="products">
                 <div class="product">
                     <div class="loaded-product">
-                        <img src="pr1.png" alt="Product image" class="product-image">
-                        <h1 class="product-title">MHelper (Custom)</h1>
-                        <h3 class="product-description">Утилита которая сожержит набор популярных антивирусов</h3>
+                        <img src="ct1.png" alt="Catalog image" class="product-image">
+                        <h1 class="product-title">Антивирусы</h1>
+                        <h3 class="product-description">Набор антивирусов для проверки ПК и защиты от вредоносного ПО</h3>
                     </div>
                 </div>
 
-                <div class="product">
+                <div id="c1" class="product">
                     <div class="loaded-product">
-                        <img src="pr2.png" alt="Product image" class="product-image">
-                        <h1 class="product-title">AnVir Task Manager</h1>
-                        <h3 class="product-description">Диспечер задач с дополнительными функциями</h3>
+                        <img src="ct2.png" alt="Product image" class="product-image">
+                        <h1 class="product-title">Утилиты</h1>
+                        <h3 class="product-description">Разные утилиты для компьютера, чтобы упростить работу и ускорить процессы</h3>
                     </div>
                 </div>
             </div>
@@ -72,10 +72,38 @@
                     </div>
                 </div>
             </div>
+
+            <h1 class="catalog-title">Антивирусы</h1>
+
+            <div class="products">
+                <div class="product">
+                    <div id="a1" class="loaded-product">
+                        <img src="a1.png" alt="Product image" class="product-image">
+                        <h1 class="product-title">Kaspersky Virus Removal Tool</h1>
+                        <h3 class="product-description">Не постоянный антивирус для сканирования пк и поиска угроз</h3>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div id="a2" class="loaded-product">
+                        <img src="a2.png" alt="Product image" class="product-image">
+                        <h1 class="product-title">Dr Web Cureit</h1>
+                        <h3 class="product-description">Не постоянный антивирус для сканирования пк и поиска угроз</h3>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div id="a3" class="loaded-product">
+                        <img src="a3.png" alt="Product image" class="product-image">
+                        <h1 class="product-title">MalwareBytes</h1>
+                        <h3 class="product-description">Надёжный антивирус с множеством функций для защиты компьютера</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
 
-        <div id="page-2">
+        <div id="page-2" class="page">
             <h1 class="catalog-title">Утилиты / Антивирусы</h1>
             <div id="avalible-programs">
                 <div class="program">
@@ -92,6 +120,21 @@
                     <p class="program-title">Process Hacker 2</p>
                     <p class="program-desc">Диспечер задач с дополнительными функциями v2</p>
                     <button class="program-link" onclick="openLink('https://drive.google.com/uc?export=download&id=1XLveucPHTzCyYxOMtzAUfLzYQYPq9Y1L')">Скачать</button>
+                </div>
+                <div class="program">
+                    <p class="program-title">Kaspersky Virus Removal Tool</p>
+                    <p class="program-desc">Антивирус для сканирования ПК</p>
+                    <button class="program-link" onclick="openLink('https://www.kaspersky.com/downloads/free-virus-removal-tool')">Скачать</button>
+                </div>
+                <div class="program">
+                    <p class="program-title">Dr Web Cureit</p>
+                    <p class="program-desc">Не постоянный антивирус для сканирования ПК</p>
+                    <button class="program-link" onclick="openLink('https://free.drweb.com/')">Перейти на сайт</button>
+                </div>
+                <div class="program">
+                    <p class="program-title">MalwareBytes</p>
+                    <p class="program-desc">Многофункциональный антивирус для постоянной защиты ПК</p>
+                    <button class="program-link" onclick="openLink('https://www.malwarebytes.com/mwb-download')">Скачать</button>
                 </div>
             </div>
         </div>

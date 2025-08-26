@@ -320,3 +320,8 @@ html, body {
     color: #b4a5d1;
     cursor: pointer;
 }
+
+#a1 img {
+    width: 80px;
+    height: 80px;
+}

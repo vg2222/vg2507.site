@@ -18,12 +18,20 @@ function openLink(link) {
 
     document.getElementById('unverified-link').textContent = link
 
-    if (link.startsWith("https://drive.google.com") || link.startsWith("https://t.me")) {
-        verified.textContent = '(данный домен зарегестрирован как безопасный)'
-        verified.style.color = '#76b183'
+    const safeDomains = [
+        "https://drive.google.com",
+        "https://free.drweb.com/",
+        "https://t.me",
+        "https://www.kaspersky.com",
+        "https://www.malwarebytes.com"
+    ];
+
+    if (safeDomains.some(domain => link.startsWith(domain))) {
+        verified.textContent = '(данный домен зарегестрирован как безопасный)';
+        verified.style.color = '#76b183';
     } else {
-        verified.textContent = '(данный домен не найден в списке безопасных)'
-        verified.style.color = '#b17676ff'
+        verified.textContent = '(данный домен не найден в списке безопасных)';
+        verified.style.color = '#b17676ff';
     }
 }
 
@@ -72,6 +80,9 @@ const p2 = document.getElementById('p2')
 const c1 = document.getElementById('c1')
 const c2 = document.getElementById('c2')
 
+const a1 = document.getElementById('a1')
+const a2 = document.getElementById('a2')
+const a3 = document.getElementById('a3')
 
 p1.addEventListener('click', function() {
     openLink('https://drive.google.com/uc?export=download&id=1DLQxTXAByG8Y-ZoBROpavaTK4t27m5kR')
@@ -87,4 +98,16 @@ c1.addEventListener('click', function() {
 
 c2.addEventListener('click', function() {
     openPage(2)
+})
+
+a1.addEventListener('click', function() {
+    openLink('https://www.kaspersky.com/downloads/free-virus-removal-tool')
+})
+
+a2.addEventListener('click', function() {
+    openLink('https://free.drweb.com/')
+})
+
+a3.addEventListener('click', function() {
+    openLink('https://www.malwarebytes.com/mwb-download')
 })
