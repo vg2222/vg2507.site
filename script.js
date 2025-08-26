@@ -81,5 +81,3 @@ p1.addEventListener('click', function() {
 p2.addEventListener('click', function() {
     openLink('https://drive.google.com/uc?export=download&id=1cUwd70HNg86Z-tGwtLeidFXmb93m7M0s')
 })
-
-openPage(2)
