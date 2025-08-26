@@ -28,18 +28,13 @@ function openLink(link) {
 }
 
 function openPage(pageNumber) {
-    const pages = [page1, page2]
-    const active = pageNumber === 1 ? page1 : page2
-    const inactive = pageNumber === 1 ? page2 : page1
-
-    active.style.display = ""
-
-    inactive.classList.add("hidden")
-    active.classList.remove("hidden")
-
-    setTimeout(() => {
-        inactive.style.display = "none"
-    }, 200)
+    if (pageNumber === 1) {
+        page1.classList.add("active");
+        page2.classList.remove("active");
+    } else {
+        page2.classList.add("active");
+        page1.classList.remove("active");
+    }
 }
 
 open.addEventListener('click', function() {
@@ -74,10 +69,22 @@ document.getElementById('telegram-link').addEventListener('click', function() {
 const p1 = document.getElementById('p1')
 const p2 = document.getElementById('p2')
 
+const c1 = document.getElementById('c1')
+const c2 = document.getElementById('c2')
+
+
 p1.addEventListener('click', function() {
     openLink('https://drive.google.com/uc?export=download&id=1DLQxTXAByG8Y-ZoBROpavaTK4t27m5kR')
 })
 
 p2.addEventListener('click', function() {
     openLink('https://drive.google.com/uc?export=download&id=1cUwd70HNg86Z-tGwtLeidFXmb93m7M0s')
+})
+
+c1.addEventListener('click', function() {
+    openPage(2)
+})
+
+c2.addEventListener('click', function() {
+    openPage(2)
 })
