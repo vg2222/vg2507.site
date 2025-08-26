@@ -39,9 +39,13 @@ function openPage(pageNumber) {
     if (pageNumber === 1) {
         page1.classList.add("active");
         page2.classList.remove("active");
+
+        page2Opened = false
     } else {
         page2.classList.add("active");
         page1.classList.remove("active");
+
+        page2Opened = true
     }
 }
 
@@ -54,19 +58,14 @@ cancel.addEventListener('click', function() {
 })
 
 document.getElementById('title').addEventListener('click', function() {
-    page2.classList.add("hidden")
-    page1.classList.remove("hidden")
+    openPage(1)
 })
 
 document.getElementById('products-link').addEventListener('click', function() {
     if (page2Opened == false) {
         openPage(2)
-
-        page2Opened = true
     } else {
         openPage(1)
-
-        page2Opened = false
     }
 })
 
